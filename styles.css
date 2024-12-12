@@ -1,0 +1,220 @@
+/* General Body */
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Black Background */
+    color: #FFFFFF; /* White text */
+    box-sizing: border-box;
+    font-size: 0.75rem; /* Even smaller font size for the whole body */
+}
+
+/* Header */
+header {
+    background-color: #ff6347; /* Tomato */
+    text-align: center;
+    padding: 20px;
+}
+
+h1, p {
+    margin: 0;
+    font-size: 1.2rem; /* Smaller header font size */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ff1493; /* Deep Pink */
+    padding: 10px;
+}
+
+nav a {
+    color: #FFFFFF; /* White text */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 0.9rem; /* Smaller font size for navigation links */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #FFFF00; /* Yellow on hover */
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+/* Section Styling */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #333333; /* Dark gray background for sections */
+    color: #FFFFFF; /* White text */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Light shadow effect */
+}
+
+section h2 {
+    font-size: 1rem; /* Smaller section header font size */
+}
+
+section p {
+    font-size: 0.8rem; /* Even smaller paragraph font size */
+}
+
+/* Hobby Section */
+.hobby {
+    margin: 20px 0;
+}
+
+.hobby-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.hobby img {
+    max-width: 100px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.hobby p {
+    max-width: 75%;
+    font-size: 0.75rem; /* Even smaller text for hobby descriptions */
+}
+
+.hobby-content a {
+    margin-top: 5px;
+    text-align: left;
+    color: #FFFF00; /* Yellow for links */
+    font-size: 0.75rem; /* Even smaller link text */
+}
+
+.hobby-content a:hover {
+    color: #FF6347; /* Tomato color on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #ff6347; /* Tomato */
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    font-size: 0.7rem; /* Even smaller footer text */
+}
+
+/* Hidden Class for Nerd Zone */
+.hidden {
+    display: none;
+}
+
+/* Special Styles for Nerd Zone Section */
+#nerd-stuff {
+    background-color: #2e8b57; /* Sea Green */
+    color: #FFFFFF;
+    font-size: 1rem; /* Smaller font size for Nerd Zone */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Pop-up Styles */
+#hint {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff6347; /* Tomato color for pop-up */
+    color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure it appears on top */
+    font-size: 1rem;
+    text-align: center;
+}
+
+#hint p {
+    margin-bottom: 15px;
+}
+
+#hint button {
+    background-color: #FFFFFF;
+    color: #ff6347;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#hint button:hover {
+    background-color: #ff1493; /* Deep Pink */
+    color: #FFFFFF;
+}
+
+/* Contact Section */
+#contact {
+    padding: 20px;
+    background-color: #333333; /* Dark gray background */
+    color: #FFFFFF; /* White text */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Light shadow effect */
+}
+
+#contact h2 {
+    font-size: 1.2rem; /* Slightly larger font for header */
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact li {
+    font-size: 1rem; /* Larger font size for the contact items */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Aligns icons with text */
+}
+
+#contact li i {
+    margin-right: 10px; /* Adds space between the icon and text */
+    color: #ff6347; /* Tomato color for icons */
+}
+
+#contact a {
+    color: #FFFF00; /* Yellow for links */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #FF6347; /* Tomato color on hover */
+    text-decoration: underline;
+}
+
+/* Small screen responsiveness */
+@media (max-width: 768px) {
+    #contact li {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    #contact i {
+        font-size: 1.1rem; /* Slightly reduce icon size on smaller screens */
+    }
+}
