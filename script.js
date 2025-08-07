@@ -16,22 +16,36 @@ document.addEventListener("DOMContentLoaded", () => {
         enteredKeys.push(e.keyCode);
 
         if (enteredKeys.toString().includes(konamiCode.toString())) {
-            // Show the nerd stuff section when the Konami code is entered
-            nerdStuffSection.classList.remove("hidden");
-            
+            // Show the nerd stuff section
+			nerdStuffSection.classList.remove("hidden");
 
-            // Play the video automatically
-            rickrollVideo.play();
+			// Random nerd titles
+			const nerdTitles = [
+			"🕹️ Secret Level Unlocked!",
+			"👾 You Found the Easter Egg!",
+			"🎮 Developer Room Access Granted",
+			"🔓 Developer Backdoor",
+			"🎶 Rickrolled in Style",
+			"Too Curious, Aren’t You?",
+			"Oops... You Triggered the Trap!"
+			];
 
-            // Mark that the Konami code was entered
-            konamiCodeEntered = true;
+			// Pick one randomly and set it as the heading
+			const randomTitle = nerdTitles[Math.floor(Math.random() * nerdTitles.length)];
+			document.querySelector('#nerd-stuff h2').innerHTML = `<i class="fas fa-microchip"></i> ${randomTitle}`;
 
-            // Scroll to the nerd-stuff section
-            nerdStuffSection.scrollIntoView({ behavior: "smooth" });
+			// Play video
+			rickrollVideo.play();
 
-            // Reset entered keys after code is completed
-            enteredKeys = [];
-        }
+			// Mark code as entered
+			konamiCodeEntered = true;
+
+			// Scroll smoothly
+			nerdStuffSection.scrollIntoView({ behavior: "smooth" });
+
+			// Reset input keys
+			enteredKeys = [];
+		}
     });
 
     // Listen for clicks on the Nerd Zone link in the navbar
