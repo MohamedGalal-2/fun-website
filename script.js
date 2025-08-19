@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Define your hints
 		const hints = [
-			"Psst... Try a classic cheat code to access the secret zone!", 
-			"Think about something gamers from the '90s would know well.",
-			"It's a sequence of arrows and buttons..."
+			"Psst... Try a classic cheat code to access the secret zone! Click again to see the next hint", 
+			"Think about something gamers from the '90s would know well. Click again to see the next hint",
+			"It's a sequence of arrows and buttons... Click again to see the next hint"
 		];
 
 		// Show hints for the first 3 clicks, then reveal the answer
