@@ -61,17 +61,24 @@ document.addEventListener("DOMContentLoaded", () => {
             return; // Skip the rest of the logic
         }
 
-        // Show hint message only on the first 3 clicks
-        if (clickCounter <= 3) {
-            hintModal.style.display = "block";
-            answerDiv.style.display = "none"; // Hide answer
-            hintMessage.textContent = "Psst... Try a classic cheat code to access the secret zone!"; // Hint message
-        } else {
-            // On the 4th click and beyond, show the answer
-            hintModal.style.display = "block";
-            answerDiv.style.display = "block"; // Show answer
-            hintMessage.textContent = ""; // Clear the hint message
-        }
+        // Define your hints
+		const hints = [
+			"Psst... Try a classic cheat code to access the secret zone!", 
+			"Think about something gamers from the '90s would know well.",
+			"It's a sequence of arrows and buttons..."
+		];
+
+		// Show hints for the first 3 clicks, then reveal the answer
+		if (clickCounter <= 3) {
+			hintModal.style.display = "block";
+			answerDiv.style.display = "none"; // Hide answer
+			hintMessage.textContent = hints[clickCounter - 1]; // Show different hint each click
+		} else {
+			// On the 4th click and beyond, show the answer
+			hintModal.style.display = "block";
+			answerDiv.style.display = "block"; // Show answer
+			hintMessage.textContent = ""; // Clear the hint message
+		}
     });
 
     // Close the hint modal when the close button is clicked
